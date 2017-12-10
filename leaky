@@ -1,0 +1,15 @@
+import queue
+import time
+a=[200,700,500,450,400,200]
+b=a[::-1]
+while len(b)!=0:
+    n=1000
+    while n>b[0]:
+        print("Packet size of ",b[0]," is sent over the network")
+        n=n-b[0]
+        b.remove(b[0])
+        print("List after sending the packet", b)
+        if(len(b)==0):
+            break
+    time.sleep(10)
+print(b)
